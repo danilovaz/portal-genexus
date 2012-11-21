@@ -1,6 +1,12 @@
 require 'digest'
 class User < ActiveRecord::Base
-  attr_accessible :born, :email, :name, :lastname, :nickname, :password, :password_confirmation
+	
+  #incluir gem gravtastic
+  include Gravtastic
+	
+  gravtastic
+
+  attr_accessible :born, :email, :name, :lastname, :nickname, :password, :password_confirmation, :profile_id
   
   attr_accessor :password
   
@@ -19,10 +25,10 @@ class User < ActiveRecord::Base
 						:if => :password_required?
   
   #associações
-  has_one :profile
+  belongs_to :profile
   has_many :articles, :order => 'published_at DESC', :dependent => :nullify
   has_many :replies, :through => :articles , :source => :comments
-  has_many :comments
+  has_many :comments  
   
   before_save :encrypt_new_password
   

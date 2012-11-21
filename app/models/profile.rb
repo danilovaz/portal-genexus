@@ -1,8 +1,8 @@
 class Profile < ActiveRecord::Base
-  attr_accessible :name, :user_id
+  attr_accessible :name
   
   #validações
   
   
-  belongs_to :user
+  has_many :user
 end

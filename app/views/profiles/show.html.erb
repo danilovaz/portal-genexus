@@ -1,15 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>User:</b>
-  <%= @profile.user_id %>
-</p>
-
-<p>
   <b>Name:</b>
   <%= @profile.name %>
 </p>
 
 
-<%= link_to 'Edit', edit_profile_path(@profile) %> |
-<%= link_to 'Back', profiles_path %>
+<%= link_to 'Editar', edit_profile_path(@profile) %> |
+<%= link_to 'Voltar', profiles_path %>

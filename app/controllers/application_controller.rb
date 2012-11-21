@@ -5,7 +5,7 @@
     # Retorna o usuário corrente ou nil(nulo) se não houver um
     def current_user
       return unless session[:user_id]
-      @current_user ||= User.find_by_id(session[:user_id]) 
+      @current_user ||= User.find_by_id(session[:user_id])
     end
 
     # Cria um helper do :current_user

@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
   before_filter :authenticate, :only => [:edit, :update]
 
+  def index
+	@users = User.all
+  end
+  
   def new
     @user = User.new
   end
@@ -8,6 +12,10 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
 
+	if not current_user
+		@user.profile_id = 3
+	end
+	
 	if @user.save
 		redirect_to articles_path, :notice => 'Usuário cadastrado com sucesso!'
 	else
@@ -15,6 +23,12 @@ class UsersController < ApplicationController
 	end
   end
 
+  def show
+  
+	@user = User.find(params[:id])
+  
+  end  
+  
   def edit
     @user = current_user
   end

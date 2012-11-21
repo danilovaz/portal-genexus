@@ -2,7 +2,6 @@
 
 <table>
   <tr>
-    <th>User</th>
     <th>Name</th>
     <th></th>
     <th></th>
@@ -11,15 +10,14 @@
 
 <% @profiles.each do |profile| %>
   <tr>
-    <td><%= profile.user_id %></td>
     <td><%= profile.name %></td>
-    <td><%= link_to 'Show', profile %></td>
-    <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
-    <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Visualizar', profile %></td>
+    <td><%= link_to 'Editar', edit_profile_path(profile) %></td>
+    <td><%= link_to 'Excluir', profile, :method => :delete, :confirm => 'Tem certeza?' %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Profile', new_profile_path %>
+<%= link_to 'Novo Perfil', new_profile_path %> 

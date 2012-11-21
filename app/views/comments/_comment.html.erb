@@ -5,6 +5,7 @@
 %>
 <%= div_for (comment, :class => classe) do %>
 	<div class="line"></div>
+	<%= image_tag comment.user.gravatar_url(:rating => 'R', :secure => true, :size => 40) %>
 	<span class="comment_user"><%= comment.user.name %></span>
 	<span class="comment_date"><%= comment.created_at.to_s(:post) %></span>
 	<span class="comment_body"><%= comment.body %></span>

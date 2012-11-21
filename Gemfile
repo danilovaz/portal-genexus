@@ -42,3 +42,6 @@ gem 'therubyracer', :platforms => :ruby
 
 # To use debugger
 # gem 'ruby-debug'
+
+# To use Gravatar
+gem 'gravtastic'

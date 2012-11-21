@@ -36,6 +36,13 @@
 		<%= f.date_select :born, :start_year => 1930, :prompt => { :day => 'Dia', :month => 'Mês', :year => 'Ano' }, :order => [:day, :month, :year] %>
 	</div>
 	
+	<% if current_user and current_user.profile.id == 1%>
+		<%= f.label :profile_id, "ID", :class => "control-label" %>
+		<div class="campo">
+			<%= f.text_field :profile_id %>
+		</div>
+	<% end %>
+	
 	<%= f.label :password, "Senha", :class => "control-label" %>
 	<div class="campo">
 		<%= f.password_field :password %>
