@@ -1,9 +1,8 @@
-﻿<%= render @article %>
-<div id="danilo">
-<p class="comentario">Comentários</p>
+<%= render @article %>
+<div class="comentario">
+	Comentários | <span><%= link_to "Novo (+)", new_article_comment_path(@article), :remote => true, :id => 'new_comment_link' %></span>
 </div>
-<div id="comments">
-	<%= render @article.comments %>
+<div id="comment_" class="comments"> 
+	<%= render @article.comment_fathers(@article.id) %>
 </div>
-
-<%= link_to "Novo Comentário", new_article_comment_path(@article), :remote => true, :id => 'new_comment_link' %>
+<div class="clear"></div>

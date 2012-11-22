@@ -15,4 +15,9 @@ class Comment < ActiveRecord::Base
 	errors.add(:article_id, "Esse artigo ainda não foi publicado") if article && !article.published?
   
   end
+  
+  def owned_by?(owner)
+    return false unless owner.is_a? User
+    user == owner
+  end
 end

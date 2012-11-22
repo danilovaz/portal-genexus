@@ -4,26 +4,36 @@ class CommentsController < ApplicationController
 	before_filter :authenticate, :only => :destroy
 	
 	def create
-		@comment = @article.comments.new(params[:comment])
-
-		if @comment.save
+		@newcomment = @article.comments.new(params[:comment])
+		@newcomment.user_id = current_user.id
+	
+		if params[:commit].eql?('Cancel')
 			respond_to do |format|
-				format.html { redirect_to @article, :notice => 'Obrigado pelo seu comentário!' }
-				format.js
+				format.js { render 'remove.js.erb' }
 			end
 		else
-			respond_to do |format|
-				format.html { redirect_to @article, :alert => 'Não foi possível adicionar comentário!' }
-				format.js { render 'fail_create.js.erb' }
+			if @newcomment.save
+				respond_to do |format|
+					format.html { redirect_to @article, :notice => 'Obrigado pelo seu comentário!' }
+					format.js
+				end
+			else
+				respond_to do |format|
+					format.html { redirect_to @article, :alert => 'Não foi possível adicionar comentário!' }
+					format.js { render 'fail_create.js.erb' }
+				end
 			end
 		end
 	end
 	
 	def destroy
-		@article = current_user.articles.find(params[:article_id])
-		@comment = @article.comments.find(params[:id])
+		@article = Article.find(params[:article_id])
+		@comment = Comment.find(params[:id])
 		@comment.destroy
-		redirect_to @article, :notice => 'Comentário deletado!'
+		respond_to do |format|
+			format.html { redirect_to @article, :notice => 'Comentário deletado!' }
+			format.js
+		end
 	end
 	
 	private

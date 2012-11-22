@@ -1,2 +1,3 @@
-﻿$("#comments").append('<%= j render @comment %>');
-$(".new_comment")[0].reset();
+<% id = '#comment_' + @newcomment.father_comment_id.to_s %>
+$("<%= id %>").append('<%= j render @newcomment %>');
+$(".new_comment").remove();

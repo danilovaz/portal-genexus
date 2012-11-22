@@ -1,3 +1,9 @@
-﻿$('<%= j render(:file => 'comments/new.html.erb') %>').insertAfter('#comments');
+<% 
+	id = '#comment_'
+	if params[:father_comment_id] 
+		id = id + params[:father_comment_id] + ' .reply'
+	end
+%>
+$(".new_comment").remove();
+$("<%= id %>").first().prepend('<%= j render(:file => 'comments/new.html.erb', :params => {:father_comment_id => params[:father_comment_id]}) %>');
 $('.new_comment').slideDown();
-$('#new_comment_link').hide();

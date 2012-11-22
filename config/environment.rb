@@ -8,3 +8,5 @@ require File.expand_path('../application', __FILE__)
 
 # Initialize the rails application
 Portaldevgex::Application.initialize!
+
+Time::DATE_FORMATS[:post] = "postado em %d %b %Y - %H:%M"

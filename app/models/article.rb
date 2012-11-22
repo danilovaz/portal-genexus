@@ -28,4 +28,8 @@ class Article < ActiveRecord::Base
     return false unless owner.is_a? User
     user == owner
   end
+  
+  def comment_fathers(article_id)
+  	Comment.find_all_by_article_id_and_father_comment_id(article_id, nil)
+  end
 end

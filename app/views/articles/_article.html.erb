@@ -1,29 +1,25 @@
-﻿<%= div_for article do %>
-	<h3>
-		<% if article.owned_by? current_user %>
-			<span class="actions">
-			<%= link_to "Editar", edit_article_path(article) %>
-			<%= link_to "Excluir", article, :confirm => "Tem certeza que deseja excluir artigo?", :method => :delete %>
-			</span>
-		<% end %>
+<%= div_for article do %>
+	<% if article.owned_by? current_user %>
+	<h3> 
+		<span class="actions">
+		<%= link_to "Editar", edit_article_path(article) %>
+		<%= link_to "Excluir", article, :confirm => "Tem certeza que deseja excluir artigo?", :method => :delete %>
+		</span>
 	</h3>
-	
-
+	<% end %>
 	<div class="materias">
-	
 	<div class="flash">
 		<h2><%= article.title %></h2>
 		<hr>
 	</div>
-
-	<article class="texto">
-		<div class="conteudotexto">
-			<p class="texto"><%= simple_format article.content %></p>
-			
-			<br><p class="autor">Por <a rel="author" href="/autores/danilovaz"><%= article.autor %></a></p>
-		</div>		
-	</article>
-
+	<div class="texto">
+		<article>
+			<div class="conteudotexto">
+				<p class="texto"><%= simple_format article.content %></p>
+				<p class="autor">Por <a rel="author" href="/autores/danilovaz"><%= article.autor %></a></p>
+			</div>		
+		</article>
+	</div>
+	<div class="clear"></div>
 </div>
-	
 <% end %>

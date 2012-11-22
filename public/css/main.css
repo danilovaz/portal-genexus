@@ -87,7 +87,7 @@ body {
    =================== */
    
 .header-container {
-    	border-bottom: 20px solid #C5453A;
+    border-bottom: 20px solid #C5453A;
 	width:100%;
 	/*background-image: url('/images/back-style.jpg');*/
 	background-color: #272122;
@@ -103,7 +103,7 @@ body {
 
 	border-top: 1px solid #C9C9C9;
 	background-color: #EEEEEE;
-	margin-top: 25%;
+	margin-top: 2%;
 }
 
 .main aside {
@@ -175,73 +175,108 @@ body {
 	font-size: 0.865em;
 }
 
-.danilo .comentario p
+.comentario
 {
-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-font-weight: lighter;
-font-size: 0.875em;
-color: red;
-width: 200px;
-border:1px solid blue;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	font-size: 1.2em;
 }
 
-div#comments {
-width: 100%;
-height: 100%;
-float: left;
-
+.comentario a:link, a:visited, a:active
+{
+	font-size: 0.9em;
+	color: gray;
 }
 
-.actions
-{
-width:200px;
-height:100%;
+.comentario a:hover {
+	color: blue;
+}
+
+.clear { 
+	clear: both;
+}
+
+div.comments {
+	width: 100%;
+	height: 100%;
+	float: left;
 }
 
 .comment{
-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-font-weight: lighter;
-font-size: 0.875em;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: lighter;
+	font-size: 12px; /*0.875em;*/
+	margin: 10px 0px 0px 20px;
 }
 
-.campo
-{
-float: left;
-width: 80%;
+.line{
+	display:block;
+	height: 1px;
+	background-color: gray;
 }
 
-.campo input{
-margin-top: 5px;
-border: 1px solid #CCC;
+.father{
+	margin-left: 0px;
 }
 
-.campo input .help-block
-{
-margin-top: 10px;
+.comment_user {
+	font-size: 14px;
+	font-weight: bold;
+	color: blue;
 }
 
-.campo .help-block
-{
-margin-bottom: 0;
+.comment_date {
+	font-size: 10px;
+	color: gray;
 }
 
-.help-block
-{
-display: block;
+.comment_body {
+	display: block;
 }
 
-.control-label
-{
-float: left;
-width: 160px;
-padding-top: 5px;
-
+.comment_actions {
+	display: block;
+	font-size: 11px;
 }
 
-.botao-enviar
-{
-width:150px;
-color: #E33353;
+.comment_actions a:link, a:visited, a:active {
+	color: gray;
+}
+.comment_actions a:hover {
+	color: blue;
+}
+
+.campo {
+	float: left;
+	width: 80%;
+}
+
+.campo input {
+	margin-top: 5px;
+	border: 1px solid #CCC;
+}
+
+.campo input .help-block {
+	margin-top: 10px;
+}
+
+.campo .help-block {
+	margin-bottom: 0;
+}
+
+.help-block {
+	display: block;
+}
+
+.control-label {
+	float: left;
+	width: 160px;
+	padding-top: 5px;
+}
+
+.botao-enviar {
+	width:150px;
+	color: #E33353;
 }
 
 
@@ -259,8 +294,8 @@ nav ul {
     
 }
 
-nav ul li{
-display: inline;
+nav ul li {
+	display: inline;
 }
 
 nav a {
@@ -276,10 +311,9 @@ nav a {
     text-decoration: none;
     color: #961A30;
     float:left;
-
 }
 
-nav a:hover{
+nav a:hover {
     color: white;
 }
 

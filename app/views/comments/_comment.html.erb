@@ -1,11 +1,22 @@
-﻿<%= div_for comment do %>
-	<h3>
-		<%= #comment.user.name %> disse:
-		<% if @article.owned_by? current_user %>
-			<span class='actions'>
-				<%= link_to 'Excluir', [@article, comment], :confirm => 'Tem certeza que deseja excluir  comentário?', :method => :delete %>
-			</span>
+<%
+	if not comment.father_comment_id
+		classe = "father"
+	end
+%>
+<%= div_for (comment, :class => classe) do %>
+	<div class="line"></div>
+	<span class="comment_user"><%= comment.user.name %></span>
+	<span class="comment_date"><%= comment.created_at.to_s(:post) %></span>
+	<span class="comment_body"><%= comment.body %></span>
+	<% if logged_in? %> 
+		<span class='comment_actions'>
+		<% if @article.owned_by? current_user or comment.owned_by? current_user %>
+			<%= link_to 'Excluir', [@article, comment], :confirm => 'Tem certeza que deseja excluir o comentário?', :remote => true, :method => :delete %>
 		<% end %>
-	</h3>
-	<%= comment.body %>
+			<%= link_to "Reply", url_for(:controller => :comments, :action => :new, :article_id => @article.id, :father_comment_id => comment.id), :remote => true %>
+		</span>
+	<% end %>
+	<div class="reply">
+		<%= render Comment.find_all_by_father_comment_id(comment.id) %>
+	</div>
 <% end %>
