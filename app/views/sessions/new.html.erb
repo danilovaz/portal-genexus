@@ -1,0 +1,21 @@
+<div id="loginContainer">
+	<a href="#" id="loginButton"><span>Login</span><em></em></a>
+	<div style="clear:both"></div>
+		<div id="loginBox">             
+			<%= form_tag  session_path do %>
+				<div class="field" id="body">
+					<%= label_tag :nickname %><br />
+					<%= text_field_tag :nickname %>
+				</div>
+				<div class="field" id="body">
+					<%= label_tag :password %><br />
+					<%= password_field_tag :password %>
+				</div>
+					
+				<div class="actions">
+					<%= submit_tag 'Login' %>
+				</div>
+				<span><a href="#">Esqueceu a sua senha?</a></span>
+			<% end %>
+		</div>
+</div>

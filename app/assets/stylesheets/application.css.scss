@@ -1,0 +1,1279 @@
+/* ------------------------------------*/
+/* ---------->>> GLOBAL <<<-----------*/
+/* -----------------------------------*/
+
+*{margin:0; padding:0;}
+
+
+body{margin: 0; padding:0; }
+	
+@font-face{ 
+	font-family: 'WebSymbolsRegular';
+	src: url('/fonts/websymbols-regular-webfont.eot');
+	src: url('/fonts/websymbols-regular-webfont.eot?#iefix') format('embedcopyded-opentype'),
+	     url('/fonts/websymbols-regular-webfont.woff') format('woff'),
+	     url('/fonts/websymbols-regular-webfont.ttf') format('truetype'),
+	     url('/fonts/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
+}
+
+@font-face{
+	font-family: 'CODE Light';
+	src: url('/fonts/CODE Light.otf');
+}
+
+.glyph { cursor: hand; font-size: 16px; line-height: 1; color: white;  } 
+.glyph:hover{color: #F23A46;} 
+.glyph.social { font-family: 'WebSymbolsRegular' ; }
+.buttontop { font-family: 'WebSymbolsRegular'; color: #929091; font-size:20px; margin-right: 1%; }
+
+
+header{
+text-align: center; 
+background-color: white;
+background-image: url('back-style.jpg');
+/*background-color: #F5E9DB;#8B1921*/
+height:10px; 
+width:100%;
+min-width: 200px; 
+margin:0;
+display: table;
+position:relative;
+}
+
+header h2 {
+color:white;
+}
+
+header h1
+{
+font-family: 'Raleway', cursive;
+font-weight: normal;
+font-size: 3.5em;
+margin: 15px 0 5px 0;
+padding: 15px 0 5px 0;
+color: white;
+}
+
+header hr
+{
+clear: both;
+border: none;
+background: none;
+border-top: 1px solid #ffffff;
+border-bottom: 1px solid #ffffff;
+}
+
+
+#slogan
+{
+clear:both;
+float:right;
+margin:15px;
+}
+
+#slogan h2
+{
+font-family: 'Amethysta', serif;
+font-size:1em;
+margin: 0;
+padding: 0;
+}
+
+#erro
+{
+background: url('404.png') no-repeat center;
+height: 155px;
+width: 294px;
+margin:0 auto;
+}
+
+#oops
+{
+font-family: 'CODE Light'; 
+font-size:3.25em;
+font-weight: normal;
+margin: 80px 0 0 70px;
+}
+
+.texterr
+{
+font-family: 'CODE Light'; 
+font-size: 2.3em;
+font-weight: normal;
+text-align:center;
+}
+
+.texterr a
+{
+color: black;
+font-weight: bold;
+text-decoration: none;
+}
+
+#steps-of-creation img
+{
+margin: 50px auto;
+height: 100%;
+width: 100%;;
+max-width: 960px;
+min-widht: 200px;
+}
+
+
+#steps-of-creation p
+{
+font-family: 'Amethysta', serif; 
+font-size: 1.12em;
+color: black;
+margin: 0 auto;
+padding:0 auto;
+width: 350px;
+}
+
+#steps-of-creation cite
+{
+font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+font-size: 0.8em;
+font-weight:normal;
+color: #ccc;
+}
+
+#erro h1
+{
+font-family: 'Amethysta', serif;
+font-weight:normal;
+}
+
+.flash h2
+{
+/*font-family: 'Raleway', cursive; font-weight: bold; font-size: 36px;*/
+font-size: 1.8em;
+font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+line-height:1.28;
+color: #D05148;
+text-align:left;
+margin-left:8px;
+margin-bottom:8px;
+}
+
+.flash hr
+{
+clear: both;
+border: none;
+background: none;
+margin:2px;
+border-top: 1px solid black;
+border-bottom: 1px solid black;
+}
+
+.flash .conteudodesc
+{
+margin:20px;
+font-size: 1em; /*16px*/
+font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+line-height:200%;
+color: #929091;
+text-align:left;
+}
+
+.flash .conteudodesc b
+{
+margin:0;
+line-height:0;
+font-size: 1em;
+font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+color: #929091;
+}
+
+/* --------------------------------------------*/
+/* ---------->>> MENU HORIZONTAL <<<-----------*/
+/* --------------------------------------------*/
+nav
+{
+height:30px;
+background-color: #CD4D44;
+background-image: url('back-style.jpg');
+margin:0px;
+clear: both;
+position:relative;
+width:100%;
+max-width: 960px;
+min-width: 200px;
+}
+
+nav ul
+{
+margin: 0;
+}
+
+nav ul li 
+{
+width: 15%;
+max-width: 130px;
+min-width: 100px;
+height:50px;
+float:left;
+overflow:hidden;
+margin: 15px 0px 0px 0px;
+padding: 0;
+}
+
+nav ul li a
+{
+font-family: 'Amethysta', serif; 
+font-weight: normal;
+font-size: 1em;
+list-style-type: none;
+text-align:center;
+color: #ffffff;
+text-decoration:none;
+}
+
+
+nav .subtext
+{
+padding-top:0px;
+}
+
+nav .inicio
+{
+/*background: white url('home.png') top left;*/
+}
+
+nav .artigos
+{
+/*background: white url('article.png') top left;*/
+}
+
+nav .ideologia
+{
+/*background: white url('ideology.png') top left;*/
+}
+
+nav .equipe
+{
+/*background: white url('team.png') top left;*/
+}
+
+nav .contato
+{
+/*background: white url('contact.png') top left;*/
+}
+
+nav .novousuario
+{
+}
+
+/* -------------------------------------*/
+/* ---------->>> PESQUISA <<<-----------*/
+/* -------------------------------------*/
+ 
+#searchForm fieldset {
+width:200px;
+clear:both;
+position:relative;
+margin-left: 80%;
+float:right;
+display:block;
+margin-top:-45px;
+margin-right: 15px;
+padding:0;
+border:none;
+}
+
+div.input {
+width:120px;
+padding:5px 15px 7px 15px;
+border-radius:20px;
+/*border:1px solid #c6d2db;
+border-top:1px solid #b4c1cb;*/
+border:1px solid #F23A46;
+border-top:1px solid #F23A46;
+/*box-shadow:inset 0 1px 2px rgba(0,0,0,0.08);*/
+float:right;
+background:#e8edf1;
+}
+
+div.input.focus {
+border:1px solid #BA3D49;
+background-color: #ffffff;
+}
+
+input#s {
+width:100%;
+border:0;
+border-radius:20px;
+background:transparent;
+height:16px;
+color:#b4bdc4;
+text-shadow:0 1px 1px #fff;
+}
+
+input#s:focus {
+outline:none
+}
+
+input#searchSubmit {
+width:19px;
+height:19px;
+text-indent:-9999px;
+overflow:hidden;
+background:url('search-icon.png') no-repeat;
+border:0;
+position:absolute;
+top:7px; right:13px;
+z-index:5;
+display:none;
+cursor:pointer;
+}
+ 
+
+/* -------------------------------------*/
+/* ---------->>> CONTEÚDO <<<-----------*/
+/* -------------------------------------*/
+#conteudo
+{
+clear: both;
+margin: 50px 0 50px 0; /*53px*/
+padding: 0 0 0 2%; /*10%*/
+width:60%;
+max-width: 960px;
+min-width: 200px;
+}
+
+#conteudo .negrito b
+{
+font-size: 1.6em;
+font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+line-height:1.28;
+color: black;
+text-align:left;
+margin-left: 1.25em;
+}
+
+/* -------------------------------------------*/
+/* ---------->>> SOCIAL LATERAL<<<------------*/
+/* -------------------------------------------*/
+#lateral
+{
+width: 15%;/*330px*/
+min-width: 242px;
+max-width: 242px;
+position:absolute;
+top:45%;
+left:72%;
+border:1px solid green;
+}
+
+#lateral .fb-like-box
+{
+
+}
+
+/* -----------------------------------------*/
+/* ---------->>> COMENTÁRIOS <<<------------*/
+/* -----------------------------------------*/
+.fb-comments
+{
+margin:0 0 0 20px;
+padding: 0;
+width: 100%;
+max-width: 470px;
+min-width: 320px;
+position:relative;
+}
+
+#likeface
+{
+min-width: 120px;
+max-width: 320px;
+width:100%;
+}
+
+/* -----------------------------------*/
+/* ---------->>> RODAPÉ <<<-----------*/
+/* -----------------------------------*/
+footer
+{
+width:100%;
+min-width: 200px;
+display: table;
+background-color:#EEEEEE ;
+border-top: 1px solid #C9C9C9;
+}
+
+
+footer a
+{
+text-decoration:none;
+}
+
+
+#imgtop
+{
+ background-image: url('nav-background.gif');
+ background-repeat: no-repeat;
+ background-position: center;
+ vertical-align: bottom;
+ height:50px;
+ margin: auto;
+ position:relative;
+}
+
+#social
+{
+height:30px;
+float:right;
+width:15%;
+clear:both;
+display: inline-table;
+vertical-align: bottom;
+margin: 5% 0px 0px 10%;
+}
+
+#social img
+{
+width:25px;
+height:25px;
+padding:3px;
+}
+
+.linha{
+border:0px solid #C9C9C9;
+display: inline-block;
+height:80px;
+margin-left:3px;
+margin-right:3px;
+}
+
+footer .redes
+{
+font-family: 'Raleway', cursive;
+font-size: 1em;
+font-weight: normal;
+color:black;  
+}
+
+footer .copy
+{
+width: 100%;
+max-width: 320px;
+clear:both;
+display: table;
+margin:0 auto;
+bottom:0;
+}
+
+footer .copy p
+{
+/*font-family:"lucida grande",tahoma,verdana,arial,sans-serif;*/
+font-family: 'Quicksand', sans-serif;
+font-size: 12px;
+text-align: center;
+bottom:0;
+padding:0;
+margin:15px 0 5px 0;
+color: #929091;
+}
+
+#subir
+{
+text-decoration:none;
+float:right;
+clear:both;
+position:relative;
+z-index:1;
+}
+
+#sitemap
+{
+float:left;
+margin: 5% 0px 5% 10%;
+}
+
+#sitemap ul li
+{
+list-style-type: none;
+}
+
+#sitemap ul li a
+{
+line-height: 15px;
+/*font-family:"lucida grande",tahoma,verdana,arial,sans-serif;  */
+font-family: 'Quattrocento Sans', sans-serif;
+font-size: 12px;
+color: #ADADAD;
+font-weight: normal;
+text-decoration:none;
+text-transform: upperCase;
+}
+
+
+/*div.integrante .intdesc p {
+font-family: 'Raleway', cursive;
+font-size: 16px;
+color: #ffffff;
+font-weight:normal;
+margin: 2px 0px 0px 5px;
+border : 1px solid pink;
+}*/
+
+
+/* ------------------------------------*/
+/* ---------->>> CONTATO <<<-----------*/
+/* ------------------------------------*/
+.contato-email {
+position:relative;
+margin: 20px auto 0px 5px;
+padding:0;
+background: white;
+display: table;
+width:auto;
+
+}
+
+.contato-email input, form textarea {
+padding: 5px;
+width: 60%;
+min-width: 200px;
+max-width: 400px;
+font-family: 'Courier New', serif;
+font-size: 1.4em;
+margin: 0px 0px 10px 1px;
+border: 2px solid #ccc;
+}
+
+.contato-email textarea {
+height: 90px;
+resize: none;
+}
+
+.contato-email textarea:focus, .contato-email input:focus {
+border: 2px solid #900;
+}
+
+.contato-email input.botao-enviar{
+width: 100px;
+min-width: 80px;
+max-width: 100px;
+float:right;
+position:relative;
+color: black;
+font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+border: #999 #000 #000 #999;
+}
+
+.contato-email input.botao-enviar:hover{
+top:1px;
+left:1px;
+border: #000 #999 #999 #000;
+cursor: pointer;
+}
+
+.contato-email label {
+float: left;
+text-align: right;
+margin-right: 15px;
+width: 100px;
+padding-top: 5px;
+font-size: 1.4em;
+font-family: 'Raleway', cursive;
+color:black;
+}
+
+
+.hint
+{
+display: none;
+}
+
+#ResultDiv
+{
+height: 400px;
+width: 400px;
+}
+/*.campo:hover .hint
+{
+position: relative;
+display: block;
+margin: 0 0 0 200px;
+padding: 7px 10px;
+float: right;
+clear:both;
+color: black;
+background-color: RGBA(219,219,219,0.5);
+font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+border:1px solid green;
+z-index: 2;
+}*/
+
+
+
+/* -----------------------------------*/
+/* ---------->>> EQUIPE <<<-----------*/
+/* -----------------------------------*/
+
+div#integrantes
+{
+margin: 60px 0px 0px 0px;
+/*background:  RGBA(219,219,219,0.5);*/
+}
+
+div.integrante {
+display: table; 
+margin:4px; /*30px 0*/
+clear: both;
+width: 100%;
+min-width: 200px;
+max-width: 576px;
+padding: 0;
+/*box-shadow: 10px 10px 5px #888888;*/
+border-bottom: 2px solid /*#8B1921*/#CC4941;
+}
+
+div.integrante .intimg
+{
+margin: 0;
+padding: 0;
+overflow: hidden;
+float: left;
+background-color: /*#8B1921 RGBA(219,219,219,0.5)*/#CC4941;
+}
+
+div.integrante .intimg img
+{
+padding: 4px;
+margin: 0;
+height:150px;
+width:150px;
+}
+
+div.integrante .intdesc
+{
+float:left;
+width: 80%;
+min-width: 200px;
+max-width: 576px;
+margin: 0;
+padding: 0;
+} 
+
+div.integrante .intdesc article cite:before
+{
+content:" ";
+position:absolute;
+width:16px;
+height:16px;
+display:block;
+background: white;
+-webkit-transform:rotate(45deg);
+-moz-transform:rotate(45deg);
+-ms-transform:rotate(45deg);
+-o-transform:rotate(45deg);
+transform:rotate(45deg);
+left:-8px;
+top:20px;
+}
+
+div.integrante .intdesc article cite
+{
+position:relative;
+display:block;
+background: white;
+padding:15px;
+box-shadow:0 0 6px 1px #DDD;
+border-radius:6px;
+-webkit-border-radius:6px;
+-moz-border-radius:6px;
+}
+
+.intdesc
+{
+display:inline;
+margin-left:20px;
+margin-right:0px;
+margin-top: 0px;
+width:100%;
+min-width: 200px;
+max-width: 960px;
+}
+
+.intdesc p
+{
+text-decoration:none;
+font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+font-size: 14px;
+color: black;
+font-weight:normal;
+font-style:normal;
+text-align: justify;
+line-height:150%;
+margin:0;
+}
+
+
+.intdesc  h3
+{
+float:right;
+font-size:.9em;
+margin:5px 10px 0 0;
+}
+
+.intdesc a:link,.intdesc a:visited,.intdesc a:hover,.intdesc a:active
+{
+color:#CC4941;
+text-decoration:none;
+}
+
+/* -------------------------------------*/
+/* ---------->>> MATÉRIAS <<<-----------*/
+/* -------------------------------------*/
+.corpomateria
+{
+/*background-color:#fff;*/
+}
+
+.cabecalho
+{
+line-height:200%;
+/*background-color:#CC4941;*/
+border-bottom: 2px dotted #CC4941;
+margin:0;
+padding-left:8px;
+padding-top:8px;
+height:80px;
+}
+
+.cabecalho h5
+{
+color:#ccc;
+font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+font-size:10px;
+text-align:left;
+margin-left:8px;
+}
+
+.cabecalho h2
+{
+color:#D1A3A6;
+font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+text-align:left;
+margin-left:8px;
+}
+
+.cabecalho h2 a
+{
+text-decoration:none;
+color:black;
+}
+.texto
+{
+/*background-color:#fff;*/
+}
+
+.conteudotexto
+{
+line-height:200%;
+font-family: Georgia;
+color: #444;
+text-decoration: none;
+word-spacing: normal;
+text-align: justify;
+letter-spacing: 0;
+line-height: 1.5em;
+font-size: 1.0em;
+font-weight: normal;
+text-justify: newspaper;
+margin: 15px;
+color:#333;
+height:100%;
+padding:2px;
+width: 100%;
+min-width: 200px;
+max-width: 960px;
+
+}
+
+.conteudotexto a
+{
+text-decoration:none;
+color: white;
+background-color: #CC4941;
+}
+
+.texto .autor
+{
+margin: 15px;
+font-size:14px;
+font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+color:#8B1921;
+}
+
+.materias
+{
+
+
+/*background-color:#fff;*/
+}
+
+/* ---------------------------------------------*/
+/* ---------->>> CADASTRO USUÁRIO <<<-----------*/
+/* ---------------------------------------------*/
+.new_user {
+position:relative;
+margin: 20px auto 0px 5px;
+padding:0;
+background: white;
+display: table;
+width:auto;
+
+}
+
+.new_user select {
+margin: 0px 0px 10px 1px;
+}
+
+.new_user input, form textarea {
+width: 60%;
+min-width: 200px;
+max-width: 400px;
+font-family: 'Courier New', serif;
+font-size: 1em;
+margin: 0px 0px 10px 1px;
+border: 2px solid #ccc;
+}
+
+.new_user textarea {
+height: 60px;
+resize: none;
+}
+
+.new_user textarea:focus, .new_user input:focus {
+border: 2px solid #900;
+}
+
+.new_user input.botao-enviar{
+width: 70px;
+min-width: 40px;
+max-width: 70px;
+float:right;
+position:relative;
+color: black;
+font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+
+}
+
+.new_user input.botao-enviar:hover{
+top:1px;
+left:1px;
+border: #000 #999 #999 #000;
+cursor: pointer;
+}
+
+.new_user label {
+float: left;
+text-align: left;
+margin-right: 15px;
+width: 100px;
+font-size: 1em;
+font-family: 'Raleway', cursive;
+color:black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------------*/
+/* ---------->>> LISTA DE MATÉRIAS <<<-----------*/
+/* ----------------------------------------------
+
+.content{margin: 0 auto; padding: 20px 20x 20px 20px; line-height: 20px;}
+.content section{ background: #F2F2F2; padding: 10px; width: 245px; float: left; margin: 15px 0 20px 50px; }
+.content section h2{ font-size: 20px; max-height: 40px; overflow: hidden; font-weight: lighter; margin: 5px 0; padding: 0; color: #AD6262; }
+.content section p{ font-size: 13px; font-weight: normal; }
+.content section a{ color: #C95F5F; text-decoration:none; font-size: 12px;}
+.content section article{ width: 235px; background: RGBA(219,219,219,0.3); padding: 0 5px 5px 5px;}
+.content section .post-data{ background: transparent url(/images/dark.png) no-repeat top left; width: 45px; height: 55px; padding: 20px 20px 5px 20px; margin: -5px 0 0 -8px; color: #8B1921; font-family: 'Univers'; font-size: 18px; font-weight: lighter; position: absolute; }
+.content section footer{ background: #8B1921!important; width: 245px; height:30px;  margin: 10px 0 -10px -10px !important; padding: 10px 10px 5px 10px; text-align: center; }
+.content section footer .twitter-share-button{ width: 100px !important; }
+.content section footer .twitter-share-button, .content section footer{ margin-top: -5px; }
+.content section footer div[id^="___plusone_"]{ width: 60px !important; }*/
+
+#wrapper { width:100%; height:100%; display:none; }
+#container { width:960px; margin:0 0 0 -190px; }
+
+#settings { 
+width:192px; position:relative;
+float:right;
+clear: right;
+margin:0; }
+
+/*---------------------------
+Button Default
+---------------------------*/
+
+.button { 
+    /*padding:8px 10px;
+    border:1px solid #caced9;
+    border-top-color:#d3d8e2;
+    border-bottom-color:#bfc4cf;
+    border-radius:3px;
+    -moz-border-radius:3px;*/
+    font-family: 'Amethysta', serif; 
+    font-weight: normal;
+    font-size: 16px;
+    list-style: none;
+    text-align:left;
+    color:#D1A3A6;
+    text-decoration:none;
+    /*box-shadow:0 1px 2px rgba(0,0,0,0.15);
+    background: #FFFFFF;
+    background: -moz-linear-gradient(top, #FFFFFF 0%, #EFF0F3 100%); 
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFFFFF), color-stop(100%,#EFF0F3));
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#EFF0F3',GradientType=0 ); 
+    background: -o-linear-gradient(top, #FFFFFF 0%,#EFF0F3 100%);*/
+    position:relative;
+    cursor:pointer;
+    display:block;
+    text-decoration:none;
+    margin: 2px 0 0 0;
+    padding:0;
+}
+
+.button span.txt {
+    height:15px;
+    padding:0 0 0 22px;
+    /*background:url(../images/cog.png) no-repeat;*/
+    display:block;
+    line-height:16px;
+    line-height:15px\9; /* Dirty IE Hack */
+}
+
+.button span.ar {
+    font-size:10px;
+    position:absolute;
+    top:2px; right:20px;
+}
+
+/*---------------------------
+Button Effects (hover/active)
+---------------------------*/
+
+.button:hover {
+    color:#D1A3A6;
+   /* background: #FFFFFF;
+    background: -moz-linear-gradient(top, #FFFFFF 0%, #e7e8ef 100%); 
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFFFFF), color-stop(100%,#e7e8ef));
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#e7e8ef',GradientType=0 ); 
+    background: -o-linear-gradient(top, #FFFFFF 0%,#e7e8ef 100%);*/
+}
+
+.button:active, .button.actives {
+    color:#D1A3A6;
+    /*border-color:#c7cbd3;
+    border-top-color:#bcc1cb;
+    border-bottom-color:#d1d4db;
+    box-shadow:inset 0 1px 2px #d2d4e3;
+    background: #FFFFFF;
+    background: -moz-linear-gradient(top, #EFF0F3 0%, #FFFFFF 100%); 
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#EFF0F3), color-stop(100%,#FFFFFF));
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#EFF0F3', endColorstr='#FFFFFF',GradientType=0 ); 
+    background: -o-linear-gradient(top, #EFF0F3 0%,#FFFFFF 100%);*/
+}
+
+.button.actives {  border-radius:3px 3px 0 0; -moz-border-radius:3px 3px 0 0; border-bottom:0; }
+
+.button:hover span.txt, .button:active span.txt, .button.actives span.txt { background-position:0 -15px }
+
+/*---------------------------
+Button Menu
+---------------------------*/
+
+.menu {
+    position:absolute;
+    top:47px;
+    left:0;
+    right:0
+    background-color: #BA3D49;
+    border-radius:0 0 3px 3px;
+    -moz-border-radius:0 0 3px 3px;
+    border: 1px solid #BA3D49;
+    border-top:0;
+    border-bottom-color: #BA3D49;
+    display:none;
+    z-index:40000;
+    padding:0;
+}
+
+.menu ul { list-style:none; padding-top:3px; margin:0;}
+
+.menu ul li { display:table; zoom:1;  margin:5px 0 0 0; padding:0;  }
+
+.menu ul li a { 
+    font-family: 'Amethysta', serif; 
+    font-weight: normal;
+    font-size: 16px;
+    list-style: none;
+    text-align:left;
+    color:#D1A3A6;
+    text-decoration:none;
+    display:table;
+    zoom:1;
+}
+
+.menu ul li a span {
+    position:absolute;
+    bottom:-1px;
+    left:0;
+    right:0;
+    height:1px;
+    display:block;
+    background-color: #BA3D49;
+    z-index:20;
+    display:none;
+    zoom:1;
+}
+
+/*---------------------------
+Button Menu li hover
+---------------------------*/
+
+.menu ul li:hover a {
+    /*border-color:#d7dbea;*/
+    color: black;
+    /*background: #fff;
+    background: -moz-linear-gradient(top, #EBEDF4 0%, #e5e7ef 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#EBEDF4), color-stop(100%,#e5e7ef)); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#EBEDF4', endColorstr='#e5e7ef',GradientType=0 );
+    background: -o-linear-gradient(top, #EBEDF4 0%,#e5e7ef 100%);
+    box-shadow:inset 0 1px 0 #fff;*/
+}
+
+.menu ul li:hover a span {
+    display:block;
+}
+
+.arts
+{
+margin: 50px 0px 0px 0px;
+display: table;
+}
+.mats
+{
+float:right;
+margin: 0px 5px 0px 15px;
+padding:0;
+}
+
+.mats h2 a
+{
+text-decoration:none;
+color: #929091;
+font-size: 18px;
+font-family: 'Amethysta', serif; 
+}
+.imgdate
+{
+background: url('fundodata.png') no-repeat;
+height: 42px;
+width: 42px;
+float:left;
+padding: -7px;
+
+}
+
+.imgdate .dates
+{
+position:relative;
+margin: 13px 0px 0px 4px;
+font-family: 'Amethysta', serif; 
+font-weight: bold;
+font-size: 11px;
+color:white;
+}
+
+/*-------LOGIN STARTS HERE -------*/
+
+/* Login Container (default to float:right) */
+#loginContainer {
+position:relative;
+float:right;
+clear: right;
+margin:15px 0 0 0;
+font-family: 'Amethysta', serif; 
+font-weight: normal;
+text-decoration:none;
+list-style: none;
+display: block;
+background-color: #BA3D49;
+}
+
+/* Login Button */
+#loginButton { 
+display:inline-block;
+float:right;
+/*background: #8B1921 #BA3D49  url(../images/buttonbg.png) repeat-x;*/
+ 
+/*border:1px solid #8B1921; */
+border:1px solid #BA3D49;
+border-radius:3px;
+-moz-border-radius:3px;
+position:relative;
+z-index:30;
+cursor:pointer;
+margin:0;
+padding:0;
+text-decoration:none;
+list-style: none;
+}
+
+/* Login Button Text */
+#loginButton span  {
+/*color:#D1A3A6;*/
+color: #ffffff;
+font-size: 16px;
+padding:0px 29px 9px 10px;
+/*background:url(../images/loginArrow.png) no-repeat 60px 5px;*/
+display:block
+}
+
+
+/* Login Box */
+#loginBox {
+position:absolute;
+top:34px;
+right:-185px;
+
+z-index:29;
+background-color: #BA3D49;
+}
+
+/* If the Login Button has been clicked */    
+#loginButton.active {
+border-radius:3px 3px 0 0;
+margin:0;
+padding:0;
+}
+
+#loginButton.active span {
+background-position:53px -76px;
+}
+
+/* A Line added to overlap the border */
+#loginButton.active em {
+position:absolute;
+width:100%;
+height:1px;
+/*background:#8B1921;*/
+background-color: #BA3D49;
+bottom:-1px;
+}
+
+/* Login Form */
+#loginForm {
+width:248px; 
+/*border:1px solid #8B1921;*/
+border: 1px solid #BA3D49;
+border-radius:3px 0 3px 3px;
+-moz-border-radius:3px 0 3px 3px;
+margin-top:-1px;
+/*background:#8B1921;*/
+background-color #BA3D49;
+padding:6px;
+}
+
+#loginForm fieldset {
+margin:0 0 12px 0;
+display:block;
+border:0;
+padding:0;
+}
+
+fieldset#body {
+/*background:#8B1921;*/
+background-color: #BA3D49;
+border-radius:3px;
+-moz-border-radius:3px;
+padding:10px 13px;
+margin:0;
+}
+
+#loginForm #checkbox {
+width:auto;
+margin:1px 9px 0 0;
+float:left;
+padding:0;
+border:0;
+*margin:-3px 9px 0 0; /* IE7 Fix */
+}
+
+#body label {
+color:#fff;
+margin:9px 0 0 0;
+display:block;
+float:left;
+}
+
+#loginForm #body fieldset label {
+display:block;
+float:none;
+margin:0 0 6px 0;
+}
+
+/* Default Input */
+#loginForm input {
+width:92%;
+border:1px solid #899caa;
+border-radius:3px;
+-moz-border-radius:3px;
+color: #8B1921;/*#3a454d;*/
+font-weight:bold;
+padding:8px 8px;
+box-shadow:inset 0px 1px 3px #bbb;
+-webkit-box-shadow:inset 0px 1px 3px #bbb;
+-moz-box-shadow:inset 0px 1px 3px #bbb;
+font-size:12px;
+}
+
+/* Sign In Button */
+#loginForm #login {
+width:auto;
+float:left;
+background:/*#8B1921*/ #BA3D49 url('/images/loginbuttonbg.png') repeat-x;
+color:#fff;
+padding:7px 10px 8px 10px;
+text-shadow:0px -1px #8B1921;
+border:1px solid #fff;
+box-shadow:none;
+-moz-box-shadow:none;
+-webkit-box-shadow:none;
+margin:0 12px 0 0;
+cursor:pointer;
+/*padding:7px 2px 8px 2px;*/ /* IE7 Fix */
+}
+
+/* Forgot your password */
+#loginForm span {
+text-align:center;
+display:block;
+padding:7px 0 4px 0;
+}
+
+#loginForm span a {
+color:#fff;
+font-size:14px;
+text-align:center;
+text-decoration:none;
+}
+
+input:focus {
+outline:none;
+}

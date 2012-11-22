@@ -1,0 +1,11 @@
+﻿<%= div_for comment do %>
+	<h3>
+		<%= #comment.user.name %> disse:
+		<% if @article.owned_by? current_user %>
+			<span class='actions'>
+				<%= link_to 'Excluir', [@article, comment], :confirm => 'Tem certeza que deseja excluir  comentário?', :method => :delete %>
+			</span>
+		<% end %>
+	</h3>
+	<%= comment.body %>
+<% end %>

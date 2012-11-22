@@ -1,0 +1,53 @@
+﻿<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  	<%= f.label :nickname, "Usuário", :class => "control-label" %>
+	<div class="campo">
+		<%= f.text_field :nickname %>
+		<!--<p class="help-block">Usuário deve conter somente letras e/ou números, sem espaços</p>-->
+	</div>
+	
+	<%= f.label :email, "E-mail", :class => "control-label" %>
+	<div class="campo">
+		<%= f.text_field :email %>
+	</div>
+	
+	<%= f.label :name, "Nome", :class => "control-label" %>
+	<div class="campo">
+		<%= f.text_field :name %>
+	</div>
+	
+	<%= f.label :lastname, "Sobrenome", :class => "control-label" %>
+	<div class="campo">
+		<%= f.text_field :lastname %>
+	</div>
+	
+	<%= f.label :born, "Nascimento", :class => "control-label" %>
+	<div class="campo">
+		<%= f.date_select :born, :start_year => 1930, :prompt => { :day => 'Dia', :month => 'Mês', :year => 'Ano' }, :order => [:day, :month, :year] %>
+	</div>
+	
+	<%= f.label :password, "Senha", :class => "control-label" %>
+	<div class="campo">
+		<%= f.password_field :password %>
+	</div>
+	
+	<%= f.label :password_confirmation, "Repetir Senha", :class => "control-label" %>
+	<div class="campo">
+		<%= f.password_field :password_confirmation %>
+	</div>
+	
+	<div class="botao-enviar">
+		<%= f.submit %>
+	</div>
+
+<% end %>

@@ -1,0 +1,9 @@
+﻿<%= form_for([@article, @article.comments.new], :remote => true, :html => {:style => 'display: block;'}) do |f| %>
+	<div class="field">
+		<%= f.label :body %><br />
+		<%= f.text_field :body %>
+	</div>
+	<div class="field">
+		<%= f.submit 'Adicionar' %>
+	</div>
+<% end %>
