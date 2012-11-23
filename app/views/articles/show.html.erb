@@ -1,6 +1,11 @@
 <%= render @article %>
 <div class="comentario">
-	Comentários | <span><%= link_to "Novo (+)", new_article_comment_path(@article), :remote => true, :id => 'new_comment_link' %></span>
+	Comentários 
+	<span>
+		<% if logged_in? %>
+		| <%= link_to "Novo (+)", new_article_comment_path(@article), :remote => true, :id => 'new_comment_link' %>
+		<% end %>
+	</span>
 </div>
 <div id="comment_" class="comments"> 
 	<%= render @article.comment_fathers(@article.id) %>

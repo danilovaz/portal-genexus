@@ -1,6 +1,10 @@
 Portaldevgex::Application.routes.draw do
 
   root :to => "articles#index"
+  
+  match '/articles/list' => "articles#list", :as => "lista"
+  match '/articles/publish/:id' => "articles#publish", :as => "publish"
+  
   resources :articles do
 	resources :comments
   end
@@ -12,7 +16,8 @@ Portaldevgex::Application.routes.draw do
   resources :categories
   resources :profiles
   
-  #Rota páginas estáticas
+  #Rota páginas estáticas  
+  match '/upload_image' => "upload_image#index", :as => "upload_image"
   match '/:action', :controller => 'page'
   
   # The priority is based upon order of creation:
@@ -70,5 +75,5 @@ Portaldevgex::Application.routes.draw do
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-  match ':controller(/:action(/:id))(.:format)'
+  #match ':controller(/:action(/:id))(.:format)'
 end

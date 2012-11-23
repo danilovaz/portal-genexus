@@ -82,4 +82,33 @@ class ArticlesController < ApplicationController
       #format.json { head :no_content }
     end
   end
+  
+  def list
+    @articles = Article.all
+
+    respond_to do |format|
+      format.html #index.html.erb
+      #format.json { render json: @articles }
+    end
+  end
+  
+  def publish
+  	@article = Article.find(params[:id])
+  	
+  	if @article.published_at
+  		@article.published_at = nil
+  	else
+  		@article.published_at = Date.today
+  	end
+  	
+  	if @article.save
+		respond_to do |format|
+			format.js
+		end
+	else
+		respond_to do |format|
+			format.js { render 'erro.js.erb' }
+		end
+	end
+  end
 end

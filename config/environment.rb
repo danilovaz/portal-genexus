@@ -10,3 +10,4 @@ require File.expand_path('../application', __FILE__)
 Portaldevgex::Application.initialize!
 
 Time::DATE_FORMATS[:post] = "postado em %d %b %Y - %H:%M"
+Time::DATE_FORMATS[:date] = "%d %b %Y - %H:%M"

@@ -1,0 +1,6 @@
+id = '#publicar_' + <%= params[:id] %>;
+if ($(id).html() == "Publicar") {
+	$(id).html("Des-publicar");
+} else {
+	$(id).html("Publicar");
+}

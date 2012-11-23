@@ -1,0 +1,39 @@
+<h1>Listing categories</h1>
+
+<table>
+	<tr>
+		<th><%= label :article, :title %></th>
+		<th><%= label :article, :autor %></th>
+		<th><%= label :article, :created_at %></th>
+		<th><%= label :user, :name %></th>
+		<th>Publicar</th>
+		<th></th>
+		<th></th>
+		<th></th>
+	</tr>
+	<% 
+		@articles.each do |article| 
+		id = 'publicar_' + article.id.to_s
+	%>
+	  <tr>
+		    <td><%= article.title %></td>
+		    <td><%= article.autor %></td>
+		    <td><%= article.created_at.to_s(:date) %></td>
+		    <td><%= article.user.name %></td>
+		    
+		    <% if article.published_at %>
+		    	<td><%= link_to 'Des-Publicar', url_for(:controller => :articles, :action => :publish, :id => article.id), :remote => true, :id => id %></td>
+		    <% else %>
+		    	<td><%= link_to 'Publicar', url_for(:controller => :articles, :action => :publish, :id => article.id), :remote => true, :id => id %></td>
+		    <% end %>
+		    
+		    <td><%= link_to 'Visualizar', article %></td>
+		    <td><%= link_to 'Editar', edit_article_path(article) %></td>
+		    <td><%= link_to 'Excluir', article, :method => :delete, :confirm => 'Tem certeza?' %></td>
+	  </tr>
+	<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Category', new_category_path %>

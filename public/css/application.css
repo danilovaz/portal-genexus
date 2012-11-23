@@ -2,6 +2,7 @@
 /* ---------->>> GLOBAL <<<-----------*/
 /* -----------------------------------*/
 
+
 *{margin:0; padding:0;}
 
 
@@ -296,6 +297,7 @@ background:#e8edf1;
 
 div.input.focus {
 border:1px solid #BA3D49;
+/*box-shadow:0 0 6px #abdcff, inset 0 1px 2px rgba(0,0,0,0.08);*/
 background-color: #ffffff;
 }
 
@@ -1001,13 +1003,17 @@ Button Menu
     position:absolute;
     top:47px;
     left:0;
-    right:0
+    right:0;
+    /*background:#8B1921;*/
     background-color: #BA3D49;
     border-radius:0 0 3px 3px;
     -moz-border-radius:0 0 3px 3px;
+    /*border:1px solid #8B1921;*/
     border: 1px solid #BA3D49;
     border-top:0;
+    /*border-bottom-color:#8B1921;*/
     border-bottom-color: #BA3D49;
+    box-shadow:0 1px 2px rgba(0,0,0,0.15);
     display:none;
     z-index:40000;
     padding:0;
@@ -1036,6 +1042,7 @@ Button Menu
     right:0;
     height:1px;
     display:block;
+    /*background:#8B1921;*/
     background-color: #BA3D49;
     z-index:20;
     display:none;
@@ -1257,7 +1264,7 @@ box-shadow:none;
 -webkit-box-shadow:none;
 margin:0 12px 0 0;
 cursor:pointer;
-/*padding:7px 2px 8px 2px;*/ /* IE7 Fix */
+*padding:7px 2px 8px 2px; /* IE7 Fix */
 }
 
 /* Forgot your password */
