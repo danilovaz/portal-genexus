@@ -184,14 +184,16 @@ body {
 	font-size: 1.2em;
 }
 
-.comentario a:link, a:visited, a:active
+.comentario a
 {
 	font-size: 0.9em;
 	color: gray;
+	text-decoration: none;
 }
 
 .comentario a:hover {
-	color: blue;
+	color: #C5453A;
+	text-decoration: none;
 }
 
 .clear { 
@@ -224,7 +226,7 @@ div.comments {
 .comment_user {
 	font-size: 14px;
 	font-weight: bold;
-	color: blue;
+	color: 555564;
 }
 
 .comment_date {
@@ -242,11 +244,13 @@ div.comments {
 	font-size: 11px;
 }
 
-.comment_actions a:link, a:visited, a:active {
+.comment_actions a {
 	color: gray;
+	text-decoration: none;
 }
 .comment_actions a:hover {
-	color: blue;
+	color: #C5453A;
+	text-decoration: none;
 }
 
 .campo {
@@ -282,6 +286,10 @@ div.comments {
 	color: #E33353;
 }
 
+.actions a{
+	text-decoration: none;
+	color: #ccc;
+}
 
 
 /* ==============
