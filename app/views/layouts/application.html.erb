@@ -45,9 +45,11 @@
 				<a href="/contato" title="Portal GeneXus| Entre em contato conosco" >Contato</a>
 			</li>
 			<% if logged_in? %>
-				<li class="novoartigo">
-					<%= link_to "Novo Artigo", new_article_path %>
-				</li>
+				<% if current_user and current_user.profile.id == 1%>
+					<li class="novoartigo">
+						<%= link_to "Novo Artigo", new_article_path %>
+					</li>
+				<% end %>
 				<li class="profile">
 					<%= link_to "Profile", edit_user_path(current_user) %>
 				</li>
