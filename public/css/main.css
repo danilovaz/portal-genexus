@@ -300,6 +300,15 @@ div.comments {
 	padding: 8px;
 }
 
+.loading {
+	width: 40px;
+	background-color: yellow;
+	position: fixed;
+	top: 140px;
+	left: 50%;
+	margin-left: -20px;
+}
+
 /* ==============
     MOBILE: Menu
    ============== */
