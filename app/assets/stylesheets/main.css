@@ -49,6 +49,10 @@ textarea {
     padding: 0.2em 0;
 }
 
+.percent {
+	width: 100%;
+}
+
 /* ===== DEFINITIONS ==================================================
    
    ========================================================================== */
@@ -221,10 +225,11 @@ div.comments {
 	margin-left: 0px;
 }
 
-.comment_user {
+.comment_user a {
+	text-decoration: none;
 	font-size: 14px;
 	font-weight: bold;
-	color: 555564;
+	color: #555564;
 }
 
 .comment_date {
@@ -289,6 +294,13 @@ div.comments {
 	color: #ccc;
 }
 
+.images{
+	width: 16px;
+	height: 16px;
+	border: 1px solid gray;
+	padding: 8px;
+}
+
 .loading {
 	width: 40px;
 	background-color: yellow;
@@ -297,6 +309,29 @@ div.comments {
 	left: 50%;
 	margin-left: -20px;
 }
+
+.notice {
+	width: 400px;
+	background-color: yellow;
+	position: fixed;
+	top: 140px;
+	left: 50%;
+	margin-left: -200px;
+}
+
+.user_show {
+	border: 1px solid gray;
+}
+
+.user_img {
+	float: left;
+}
+
+.user_info {
+	display: inline-block;
+	margin: 0px 0px 0px 10px;
+}
+
 
 /* ==============
     MOBILE: Menu
