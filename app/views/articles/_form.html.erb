@@ -99,10 +99,6 @@
     <%= f.text_field :autor %>
   </div>
   <div class="field">
-    <%= f.label "Data" %><br />
-    <%= f.date_select :postdate, :start_year => 2012, :prompt => { :day => 'Dia', :month => 'Mês', :year => 'Ano' }, :order => [:day, :month, :year]  %>
-  </div>
-  <div class="field">
 	<%= f.label "Categorias" %><br />
 	<% for category in Category.all %>
 		<%= check_box_tag 'article[category_ids][]', category.id, @article.category_ids.include?(category.id), :id => dom_id(category) %>
