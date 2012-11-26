@@ -29,7 +29,9 @@ class CommentsController < ApplicationController
 	def destroy
 		@article = Article.find(params[:article_id])
 		@comment = Comment.find(params[:id])
-		@comment.destroy
+		
+		delete_cascading(@comment)
+		
 		respond_to do |format|
 			format.html { redirect_to @article, :notice => 'Comentário deletado!' }
 			format.js
@@ -39,5 +41,14 @@ class CommentsController < ApplicationController
 	private
 		def load_article
 			@article = Article.find(params[:article_id])
+		end
+		
+		def delete_cascading(comment)
+			@comments = Comment.find_all_by_father_comment_id(comment.id)
+			@comments.each do |c|
+				delete_cascading(c);
+				c.destroy
+			end
+			comment.destroy
 		end
 end

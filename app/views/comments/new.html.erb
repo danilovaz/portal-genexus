@@ -4,7 +4,7 @@
 		<%= f.text_field :father_comment_id, :value => params[:father_comment_id], :type => "hidden" %>
 	</div>
 	<div class="field">
-		<%= f.submit 'Adicionar' %>
-		<%= submit_tag 'Cancel' %>
+		<%= f.submit 'Adicionar', :onclick => "showLoading()" %>
+		<%= submit_tag 'Cancel', :onclick => "showLoading()" %>
 	</div>
 <% end %>

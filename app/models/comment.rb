@@ -4,7 +4,6 @@ class Comment < ActiveRecord::Base
   #associações
   belongs_to :article
   belongs_to :user
-
   
   #validações
   validates :article_id, :user_id, :body, :presence => true

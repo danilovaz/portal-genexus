@@ -49,8 +49,6 @@ textarea {
     padding: 0.2em 0;
 }
 
-
-
 /* ===== DEFINITIONS ==================================================
    
    ========================================================================== */
@@ -291,6 +289,14 @@ div.comments {
 	color: #ccc;
 }
 
+.loading {
+	width: 40px;
+	background-color: yellow;
+	position: fixed;
+	top: 140px;
+	left: 50%;
+	margin-left: -20px;
+}
 
 /* ==============
     MOBILE: Menu

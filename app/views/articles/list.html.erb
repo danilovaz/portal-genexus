@@ -22,9 +22,9 @@
 		    <td><%= article.user.name %></td>
 		    
 		    <% if article.published_at %>
-		    	<td><%= link_to 'Des-Publicar', url_for(:controller => :articles, :action => :publish, :id => article.id), :remote => true, :id => id %></td>
+		    	<td><%= link_to 'Des-Publicar', url_for(:controller => :articles, :action => :publish, :id => article.id), :remote => true, :id => id, :onclick => "showLoading()" %></td>
 		    <% else %>
-		    	<td><%= link_to 'Publicar', url_for(:controller => :articles, :action => :publish, :id => article.id), :remote => true, :id => id %></td>
+		    	<td><%= link_to 'Publicar', url_for(:controller => :articles, :action => :publish, :id => article.id), :remote => true, :id => id, :onclick => "showLoading()" %></td>
 		    <% end %>
 		    
 		    <td><%= link_to 'Visualizar', article %></td>
