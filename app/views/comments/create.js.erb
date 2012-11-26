@@ -1,3 +1,5 @@
 <% id = '#comment_' + @newcomment.father_comment_id.to_s %>
 $("<%= id %>").append('<%= j render @newcomment %>');
 $(".new_comment").remove();
+hideLoading();
+showNotice("Comentário criado com sucesso");

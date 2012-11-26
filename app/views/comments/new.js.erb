@@ -7,3 +7,4 @@
 $(".new_comment").remove();
 $("<%= id %>").first().prepend('<%= j render(:file => 'comments/new.html.erb', :params => {:father_comment_id => params[:father_comment_id]}) %>');
 $('.new_comment').slideDown();
+hideLoading();

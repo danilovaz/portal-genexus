@@ -49,7 +49,9 @@ textarea {
     padding: 0.2em 0;
 }
 
-
+.percent {
+	width: 100%;
+}
 
 /* ===== DEFINITIONS ==================================================
    
@@ -291,7 +293,12 @@ div.comments {
 	color: #ccc;
 }
 
-
+.images{
+	width: 16px;
+	height: 16px;
+	border: 1px solid gray;
+	padding: 8px;
+}
 
 /* ==============
     MOBILE: Menu

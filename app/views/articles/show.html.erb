@@ -3,7 +3,7 @@
 	Comentários 
 	<span>
 		<% if logged_in? %>
-		| <%= link_to "Novo (+)", new_article_comment_path(@article), :remote => true, :id => 'new_comment_link' %>
+		| <%= link_to "Novo (+)", new_article_comment_path(@article), :remote => true, :id => 'new_comment_link', :onclick => "showLoading()" %>
 		<% end %>
 	</span>
 </div>
