@@ -1,39 +1,33 @@
-<h1>Listing categories</h1>
+<h1>Publicar Artigos</h1>
 
 <table>
 	<tr>
-		<th><%= label :article, :title %></th>
-		<th><%= label :article, :autor %></th>
-		<th><%= label :article, :created_at %></th>
-		<th><%= label :user, :name %></th>
-		<th>Publicar</th>
-		<th></th>
-		<th></th>
-		<th></th>
+		<th><%= label :article, :title, "Título" %></th>
+		<th><%= label :article, :autor, "Autor" %></th>
+		<th class="percent"><%= label :article, :created_at,"Criado em" %></th>
+		<th><%= label :user, :name, "Nome" %></th>
 	</tr>
 	<% 
 		@articles.each do |article| 
 		id = 'publicar_' + article.id.to_s
 	%>
 	  <tr>
-		    <td><%= article.title %></td>
-		    <td><%= article.autor %></td>
-		    <td><%= article.created_at.to_s(:date) %></td>
-		    <td><%= article.user.name %></td>
+		    <td class="images"><%= article.title %></td>
+		    <td class="images"><%= article.autor %></td>
+		    <td class="images"><%= article.created_at.to_s(:date) %></td>
+		    <td class="images"><%= article.user.name %></td>
 		    
 		    <% if article.published_at %>
-		    	<td><%= link_to 'Des-Publicar', url_for(:controller => :articles, :action => :publish, :id => article.id), :remote => true, :id => id %></td>
+		    	<td class="images"><%= link_to image_tag("/images/decrease.png", :alt => 'Despublicar', :title => "Despublicar") + '', url_for(:controller => :articles, :action => :publish, :id => article.id), :remote => true, :id => id, :onclick => "showLoading()" %></td>
 		    <% else %>
-		    	<td><%= link_to 'Publicar', url_for(:controller => :articles, :action => :publish, :id => article.id), :remote => true, :id => id %></td>
-		    <% end %>
+		    	<td class="images"><%= link_to image_tag("/images/increase.png", :alt => 'Publicar', :title => 'Publicar') + '', url_for(:controller => :articles, :action => :publish, :id => article.id), :remote => true, :id => id, :onclick => "showLoading()" %></td>
+			<% end %>
 		    
-		    <td><%= link_to 'Visualizar', article %></td>
-		    <td><%= link_to 'Editar', edit_article_path(article) %></td>
-		    <td><%= link_to 'Excluir', article, :method => :delete, :confirm => 'Tem certeza?' %></td>
+		    <td class="images"><%= link_to image_tag("/images/eye.png", :alt => 'Visualizar', :title => 'Visualizar') + '', article %></td>
+		    <td class="images"><%= link_to image_tag("/images/pencil.png", :alt => 'Editar', :title => 'Editar') + '', edit_article_path(article) %></td>
+		    <td class="images"><%= link_to image_tag("/images/delete.png", :alt => 'Excluir', :title => 'Excluir') + '', article, :method => :delete, :confirm => 'Tem certeza?' %></td>
 	  </tr>
 	<% end %>
 </table>
 
 <br />
-
-<%= link_to 'New Category', new_category_path %>
