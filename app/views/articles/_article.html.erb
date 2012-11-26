@@ -16,7 +16,7 @@
 		<article>
 			<div class="conteudotexto">
 				<p class="texto"><%= simple_format article.content %></p>
-				<p class="autor">Por <a rel="author" href="/autores/danilovaz"><%= article.autor %></a></p>
+				<p class="autor">Por <a rel="author" href="/autores/danilovaz"><%= article.user.name %></a></p>
 			</div>		
 		</article>
 	</div>

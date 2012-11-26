@@ -19,7 +19,8 @@
   <link href="http://fonts.googleapis.com/css?family=Raleway:100|Amethysta|Sofia|Quicksand:300,400,700|Quattrocento+Sans" rel="stylesheet" type="text/css">
   <script type="text/javascript">
   	$(document).ready(function(){
-  		$(".loading").css("display", "none");	
+  		$(".loading").css("display", "none");
+		$(".notice").css("display", "none");
   	});
   	function showLoading() {
   		$(".loading").css("display", "");
@@ -28,7 +29,11 @@
   		$(".loading").css("display", "none");
   	}
   	function showNotice(msg) {
-  		$("#flash_notice").html('<p class="notice">' + msg + '</p>');
+		$(document).ready(function(){
+			$("#flash_notice").html('<p class="notice">' + msg + '</p>');
+			$(".notice").css("display", "");
+			setTimeout("$('.notice').css('display', 'none')", 2000);
+		});
   	}
   </script>
 </head>
@@ -90,8 +95,12 @@
 	<div class="main wrapper clearfix">
 		<article>
 			<div id="flash_notice">
-				<%= content_tag :p, notice, :class => "notice" if notice.present? %>
-				<%= content_tag :p, alert, :class => "alert" if alert.present? %>
+				<% if notice.present? %>
+					<script type="text/javascript">showNotice("<%= notice %>");</script>
+				<% end %>
+				<% if alert.present? %>
+					<script type="text/javascript">showNotice("<%= alert %>");</script>
+				<% end %>
 			</div>
 			<%= yield %>
 		</article>

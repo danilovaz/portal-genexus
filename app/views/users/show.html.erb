@@ -1,24 +1,29 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Nickname:</b>
-  <%= @user.nickname %>
-</p>
+<div class="user_show">
+<div class="user_img">
+	<%= image_tag @user.gravatar_url(:rating => 'R', :secure => true, :size => 120) %>
+</div>
+<div class="user_info">
+	<div class="user_nick">
+	  <b>Nick:</b>
+	  <%= @user.nickname %>
+	</div>
+	<div class="user_email">
+	  <b>E-mail:</b>
+	  <%= @user.email %>
+	</div>
 
-<p>
-  <b>Email:</b>
-  <%= @user.email %>
-</p>
+	<div class="user_name">
+	  <b>Nome:</b>
+	  <%= @user.name %>
+	</div>
 
-<p>
-  <b>Name:</b>
-  <%= @user.name %>
-</p>
-
-<p>
-  <b>Born:</b>
-  <%= @user.born %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+	<div class="user_born">
+	  <b>Nascimento:</b>
+	  <%= @user.born %>
+	</div>
+</div>
+<div class="clear"> 
+</div>
+</div>

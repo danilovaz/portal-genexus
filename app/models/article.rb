@@ -1,9 +1,8 @@
 class Article < ActiveRecord::Base
-  attr_accessible :autor, :content, :resume, :title, :published_at
+  attr_accessible :content, :resume, :title, :published_at
   
   #validações
   validates :title, :presence => true
-  validates :autor, :presence => true
   validates :content, :presence => true
   validates :resume, :presence => true
   

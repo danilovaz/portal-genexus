@@ -1,7 +1,10 @@
 id = '#publicar_' + <%= params[:id] %>;
-if ($(id).html() == "Publicar") {
-	$(id).html("Des-publicar");
+id_img = id + ' img';
+if ($(id_img).first().attr('title') == "Publicar") {
+	$(id).html("<%= j image_tag('/images/decrease.png', :alt => 'Despublicar', :title => 'Despublicar', :id => 'img_publish') %>");
+	showNotice("Artigo publicado com sucesso!");
 } else {
-	$(id).html("Publicar");
+	$(id).html("<%= j image_tag('/images/increase.png', :alt => 'Publicar', :title => 'Publicar', :id => 'img_publish') %>");
+	showNotice("Artigo despublicado com sucesso!");
 }
 hideLoading();
