@@ -787,8 +787,22 @@ input[type="submit"].solid:active	{
     nav {
         float: left;
         width: 100% /*;38%*/
-        
     }
+    
+    nav ul li {
+	    display: block;
+	    position: relative;
+	    float: left;
+	    padding: 0px 20px 0px 20px;
+	}
+    
+	nav ul li ul {
+		top: 30px;
+		left: 0px;
+		position: absolute;
+		display: none;
+		background-color: #C5453A;
+	}
 
 /* ============
     WIDE: Main
