@@ -2,10 +2,9 @@
 		<h2>Artigos</h2>
 		<hr>
 		<p class="conteudodesc">Aqui você encontra nosso baú do tesouro, contendo tudo que há de mais novo na Comunidade GeneXus.<br>Notícias e tutoriais GeneXus, você encontra aqui, no Portal DevGeX.</p>	
+
 		<% @articles.each do |c| %>
-			<div class="arts"> 
-				<div class="imgdate"><div class="dates"><%= c.created_at.strftime("%d de %b de %y") %></div></div>
-				<div class="mats"><h2 class="aga2"><%= link_to c.title, :action => 'show', :id => c.id %></h2></div>
-			</div>
+				<h3> <%= link_to c.title, :action => 'show', :id => c.id %> </h3>
+				<h6>Escrito por  em <%= c.created_at.strftime("%d de %b de %y") %></h6>
 		<% end %>
 </header>

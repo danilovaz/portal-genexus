@@ -1,6 +1,4 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@value"ò{"required_assets_digest"%547dd9b486af5038534bc9d23181c2b8"content_type"text/css"
-class"BundledAsset"
-mtime"2013-06-20T15:22:51-03:00"_version"%7270767b2a9e9fff880aa5de378ca791"digest"%4a48a3852ce8d253668b8226ec002c2a"pathname"*$root/app/assets/stylesheets/main.css"logical_path"main.css"lengthi¬œ"source"¬œ@font-face {
+o: ActiveSupport::Cache::Entry	:@compressedF:@value"µœ["¬œ@font-face {
     font-family: 'BellotaRegular';
     src: url('Bellota-Regular-webfont.eot');
     src: url('Bellota-Regular-webfont.eot?#iefix') format('embedded-opentype'),
@@ -1284,4 +1282,4 @@ table.show-for-xlarge, table.show-for-large, table.hide-for-small, table.hide-fo
   .top-bar ul li.has-button { padding: 5px 15px; }
   .top-bar ul li .button.small { margin: 0 !important; display: inline-block; width: 100%; }
   .top-bar ul > li.has-button a.button { margin: 0; } }
-:@created_atf1371754421.810096 Ø:@expires_in0
+:@created_atf1371754422.9267659 P":@expires_in0
