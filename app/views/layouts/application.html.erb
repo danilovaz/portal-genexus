@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html  class="no-js" lang="pt-br">
 	<head>
+		<meta charset="utf-8" />
+
+		<!-- Set the viewport width to device width for mobile -->
+		<meta name="viewport" content="width=device-width" />
+
 		<title>Portal GeneXus | O guia do desenvolvedor GeneXus.</title>
-		
-		<%= stylesheet_link_tag 'normalize.min' %>
-		<%= stylesheet_link_tag 'main' %>
-		<%= stylesheet_link_tag 'jquery.wysiwyg' %>
 		
 		<%= javascript_include_tag 'application' %>
 		
@@ -14,109 +15,79 @@
 		<link href="http://fonts.googleapis.com/css?family=Raleway:100|Amethysta|Sofia|Quicksand:300,400,700|Quattrocento+Sans" rel="stylesheet" type="text/css">
 	</head>
 	<body>
-		<div class="header-container">
-			<header class="wrapper clearfix">
-				<h1 class="title">Portal GeneXus.</h1>
-			</header>
-			<nav>
-				<ul>
-					<li class="inicio">
-						<%=link_to "Início", {:controller => "page", :action => "inicio"}, {:title=>"Portal GeneXus| O guia do desenvolvedor GeneXus"} %>
-					</li>
-					<li class="artigos">
-						<%=link_to "Artigos", articles_path, {:title=>"Portal GeneXus| Base de Conhecimentos"} %>
-					</li>
-					<li class="ideologia">
-						<%=link_to "Ideologia", {:controller => "page", :action => "ideologia"}, {:title=>"Portal GeneXus| A idéia por trás do código"} %>
-					</li>
-					<li class="equipe">
-						<%=link_to "Equipe", {:controller => "page", :action => "equipe"}, {:title=>"Portal DevGeX | Equipe Portal GeneXus"} %>
-					</li>
-					<li class="downloads">
-						<a href="#" title="Portal DevGeX | Downloads">Downloads</a>
-					</li>
-					<li class="contato">
-						<a href="/contato" title="Portal GeneXus| Entre em contato conosco" >Contato</a>
-					</li>
-					<% if logged_in? %>
-						<% if current_user and current_user.profile.id == 1%>
-							<li class="submenu">
-								<a href="#">Administração</a>
-								<ul>
-									<li><%= link_to "Artigos", {:controller => :articles, :action => :list} %></li>
-									<li><a href="#">Categorias</a></li>
-									<li><a href="#">Downloads</a></li>
-									<li><a href="#">Imagens</a></li>
-									<li><a href="#">Perfis</a></li>
-									<li><a href="#">Usuários</a></li>
-								</ul>
-							</li>
-						<% end %>
-						<li class="profile">
-							<%= link_to "Profile", edit_user_path(current_user) %>
-						</li>
-						<li class="sair">
-							<%= link_to "Sair", logout_path %>
-						</li>
-					<% else %>
-						<li class="novousuario">
-							<%= link_to "Registrar", new_user_path %>
-						</li>
-						<li class="entrar">
-							<%= link_to "Entrar", login_path %>
-						</li>
-					<% end %>
-				</ul>
-		    </nav>
+	<div class="row">
+		<div class="twelve columns">
+			<h1>Portal GeneXus - <small>O guia do desenvolvedor GeneXus.</small>
+			<hr />
+		    <ul class="nav-bar">
+		        <li><%=link_to "Início", {:controller => "page", :action => "inicio"}, {:title=>"Portal GeneXus| O guia do desenvolvedor GeneXus"} %></li>
+		        <li><%=link_to "Artigos", articles_path, {:title=>"Portal GeneXus| Base de Conhecimentos"} %></li>
+		        <li><%=link_to "Ideologia", {:controller => "page", :action => "ideologia"}, {:title=>"Portal GeneXus| A idéia por trás do código"} %></li>
+		        <li><%=link_to "Equipe", {:controller => "page", :action => "equipe"}, {:title=>"Portal DevGeX | Equipe Portal GeneXus"} %></li>
+		        <li><a href="#">Downloads</a></li>
+		        <li><a href="/contato" title="Portal GeneXus| Entre em contato conosco" >Contato</a></li>
+		        <% if logged_in? %>
+		            <% if current_user and current_user.profile.id == 1%>
+		            	<li class="submenu">
+			                <a href="#">Administração</a>
+			                <ul>
+			                  <li><%= link_to "Artigos", {:controller => :articles, :action => :list} %></li>
+			                  <li><a href="#">Categorias</a></li>
+			                  <li><a href="#">Downloads</a></li>
+			                  <li><a href="#">Imagens</a></li>
+			                  <li><a href="#">Perfis</a></li>
+			                  <li><a href="#">Usuários</a></li>
+			                </ul>
+		              	</li>
+		            <% end %>
+		        	<li class="profile"><%= link_to "Profile", edit_user_path(current_user) %></li>
+	            	<li class="sair"><%= link_to "Sair", logout_path %></li>
+	          	<% else %>
+	            	<li class="novousuario"><%= link_to "Registrar", new_user_path %></li>
+	            	<li class="entrar"><%= link_to "Entrar", login_path %></li>
+		        <% end %>
+			</ul>
 		</div>
-		
-		<div class="main-container">
-			<div class="loading">
-				<%= image_tag "loading.gif" %>
+	</div>
+	<div class="row">
+		<div class="nine columns" role="content">
+			<article>
+				<%= yield %>
+			</article>
+		</div>
+		<aside class="three columns">
+			<h5>Categorias</h5>
+			<ul class="side-nav">
+				<li><a href="#">Notícias</a></li>
+				<li><a href="#">GeneXus 8</a></li>
+				<li><a href="#">GeneXus 9</a></li>
+				<li><a href="#">GeneXus X Ev.1</a></li>
+				<li><a href="#">GeneXus X Ev.2</a></li>
+			</ul>
+			<div class="panel">
+				<h5>Featured</h5>
+				<p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow.</p>
+				<a href="#">Read More &rarr;</a>
 			</div>
-			<div class="main wrapper clearfix">
-				<article>
-					<div id="flash_notice">
-						<% if notice.present? %>
-							<script type="text/javascript">showNotice("<%= notice %>");</script>
-						<% end %>
-						<% if alert.present? %>
-							<script type="text/javascript">showNotice("<%= alert %>");</script>
-						<% end %>
+		</aside>
+	</div>
+	<footer class="row">
+		<div class="twelve columns">
+			<hr />
+			<div class="row">
+				<div class="six columns">
+					<p>&copy; GeneXus e seus produtos são marcas registradas de Artech Consultores SRL.</p>
+				</div>
+					<div class="six columns">
+						<ul class="link-list right">
+							<li><a href="#">Link 1</a></li>
+							<li><a href="#">Link 2</a></li>
+							<li><a href="#">Link 3</a></li>
+							<li><a href="#">Link 4</a></li>
+						</ul>
 					</div>
-					<%= yield %>
-				</article>
-				<aside>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices.</p>
-				</aside>
-				<div id="main">
-					<form>
-						<input type="text" id="search">
-						<input type="submit" class="solid" value="Pesquisar">
-					</form>
-				</div>
-		    </div> <!-- #main -->
-		</div> <!-- #main-container -->
-		
-		<div class="footer-container">
-			<footer class="wrapper">
-				<div class="sitemap">
-					<ul>
-						<li><%=link_to "Início", {:controller => "page", :action => "inicio"}, {:title=>"Portal DevGeX | O guia do desenvolvedor GeneXus"} %></li>
-						<li><%=link_to "Artigos", articles_path, {:title=>"Portal DevGeX | Base de Conhecimentos"} %></li>
-						<li><%=link_to "Ideologia", {:controller => "page", :action => "ideologia"}, {:title=>"Portal DevGeX | A idéia por trás do código"} %></li>
-						<li><%=link_to "Equipe", {:controller => "page", :action => "equipe"}, {:title=>"Portal DevGeX | Equipe Portal DevGex"} %></li>
-						<li><a href="/contato" title="Portal DevGeX | Entre em contato conosco" >Contato</a></li>
-					</ul>
-				</div>
-				<div class="copy">
-					<p>
-						Portal GeneXus &copy; | O guia do desenvolvedor GeneXus.
-						<br>
-						<p class="genexus">GeneXus e seus produtos são marcas registradas de Artech Consultores SRL.</p>
-					</p>
-				</div>
-		    </footer>
+			</div>
 		</div>
-	</body>
+	</footer>
+</body>
 </html>
