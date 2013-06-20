@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
@@ -119,4 +120,98 @@
 		    </footer>
 		</div>
 	</body>
+=======
+<!DOCTYPE html>
+<html  class="no-js" lang="pt-br">
+	<head>
+		<meta charset="utf-8" />
+
+		<!-- Set the viewport width to device width for mobile -->
+		<meta name="viewport" content="width=device-width" />
+
+		<title>Portal GeneXus | O guia do desenvolvedor GeneXus.</title>
+		
+		<%= javascript_include_tag 'application' %>
+		
+		<%= csrf_meta_tags %>
+		
+		<link href="http://fonts.googleapis.com/css?family=Raleway:100|Amethysta|Sofia|Quicksand:300,400,700|Quattrocento+Sans" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+	<div class="row">
+		<div class="twelve columns">
+			<h1>Portal GeneXus - <small>O guia do desenvolvedor GeneXus.</small>
+			<hr />
+		    <ul class="nav-bar">
+		        <li><%=link_to "Início", {:controller => "page", :action => "inicio"}, {:title=>"Portal GeneXus| O guia do desenvolvedor GeneXus"} %></li>
+		        <li><%=link_to "Artigos", articles_path, {:title=>"Portal GeneXus| Base de Conhecimentos"} %></li>
+		        <li><%=link_to "Ideologia", {:controller => "page", :action => "ideologia"}, {:title=>"Portal GeneXus| A idéia por trás do código"} %></li>
+		        <li><%=link_to "Equipe", {:controller => "page", :action => "equipe"}, {:title=>"Portal DevGeX | Equipe Portal GeneXus"} %></li>
+		        <li><a href="#">Downloads</a></li>
+		        <li><a href="/contato" title="Portal GeneXus| Entre em contato conosco" >Contato</a></li>
+		        <% if logged_in? %>
+		            <% if current_user and current_user.profile.id == 1%>
+		            	<li class="submenu">
+			                <a href="#">Administração</a>
+			                <ul>
+			                  <li><%= link_to "Artigos", {:controller => :articles, :action => :list} %></li>
+			                  <li><a href="#">Categorias</a></li>
+			                  <li><a href="#">Downloads</a></li>
+			                  <li><a href="#">Imagens</a></li>
+			                  <li><a href="#">Perfis</a></li>
+			                  <li><a href="#">Usuários</a></li>
+			                </ul>
+		              	</li>
+		            <% end %>
+		        	<li class="profile"><%= link_to "Profile", edit_user_path(current_user) %></li>
+	            	<li class="sair"><%= link_to "Sair", logout_path %></li>
+	          	<% else %>
+	            	<li class="novousuario"><%= link_to "Registrar", new_user_path %></li>
+	            	<li class="entrar"><%= link_to "Entrar", login_path %></li>
+		        <% end %>
+			</ul>
+		</div>
+	</div>
+	<div class="row">
+		<div class="nine columns" role="content">
+			<article>
+				<%= yield %>
+			</article>
+		</div>
+		<aside class="three columns">
+			<h5>Categorias</h5>
+			<ul class="side-nav">
+				<li><a href="#">Notícias</a></li>
+				<li><a href="#">GeneXus 8</a></li>
+				<li><a href="#">GeneXus 9</a></li>
+				<li><a href="#">GeneXus X Ev.1</a></li>
+				<li><a href="#">GeneXus X Ev.2</a></li>
+			</ul>
+			<div class="panel">
+				<h5>Featured</h5>
+				<p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow.</p>
+				<a href="#">Read More &rarr;</a>
+			</div>
+		</aside>
+	</div>
+	<footer class="row">
+		<div class="twelve columns">
+			<hr />
+			<div class="row">
+				<div class="six columns">
+					<p>&copy; GeneXus e seus produtos são marcas registradas de Artech Consultores SRL.</p>
+				</div>
+					<div class="six columns">
+						<ul class="link-list right">
+							<li><a href="#">Link 1</a></li>
+							<li><a href="#">Link 2</a></li>
+							<li><a href="#">Link 3</a></li>
+							<li><a href="#">Link 4</a></li>
+						</ul>
+					</div>
+			</div>
+		</div>
+	</footer>
+</body>
+>>>>>>> 4804175f3ca5e2527752446395ec92a63eae3267
 </html>
