@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :authenticate, :only => [:edit, :update]
+  before_filter :authenticate, :only => [:edit, :update, :index, :show]
 
   def index
 	@users = User.all
@@ -11,11 +11,11 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(params[:user])
-
+	
 	if not current_user
 		@user.profile_id = 3
 	end
-	
+		
 	if @user.save
 		redirect_to articles_path, :notice => 'Usuário cadastrado com sucesso!'
 	else

@@ -1,7 +1,8 @@
 Portaldevgex::Application.routes.draw do
 
   root :to => "articles#index"
-  
+    #Rota páginas estáticas  
+  match '/upload_image' => "upload_image#upload", :as => "upload_image"
   match '/articles/list' => "articles#list", :as => "lista"
   match '/articles/publish/:id' => "articles#publish", :as => "publish"
   
@@ -16,8 +17,7 @@ Portaldevgex::Application.routes.draw do
   resources :categories
   resources :profiles
   
-  #Rota páginas estáticas  
-  match '/upload_image' => "upload_image#index", :as => "upload_image"
+
   match '/:action', :controller => 'page'
   
   # The priority is based upon order of creation:

@@ -29,10 +29,11 @@ body{margin: 0; padding:0; }
 
 
 header{
-text-align: center; 
+text-align: center; /*
 background-color: white;
 background-image: url('back-style.jpg');
-/*background-color: #F5E9DB;#8B1921*/
+background-color: #F5E9DB;#8B1921*/
+background-color: green;
 height:10px; 
 width:100%;
 min-width: 200px; 
